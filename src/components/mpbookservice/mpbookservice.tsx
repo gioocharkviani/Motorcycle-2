@@ -20,6 +20,13 @@ const Mpbookservice = () => {
   const [modelvalue , setnmodelvalue] = useState('')
   
 
+  useEffect(()=>{
+    setfilteredData({})
+  }, [open])
+
+  useEffect(()=>{
+    setfilteredmodels([])
+  }, [openModel])
   
 
   useEffect(()=>{
