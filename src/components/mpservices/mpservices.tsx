@@ -8,7 +8,7 @@ const Mpservices = () => {
     <div className='w-[100%] flex justify-center py-[70px] bg-[#171717]'>
       <div className='w-[95%] flex flex-col sm:flex-row justify-between sm:gap-[50px] gap-[20px]'>
 
-        {datageo.map(item => {
+        {data.map(item => {
           return (
             <div key={item.id} className='h-[200px] w-full relative overflow-hidden mpservice-wrapper'>
               <div className='absolute z-[1] w-full h-full '>

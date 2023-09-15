@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import Header from '@/components/header/header'
 
 import {  } from 'next/font/google'
+import Footer from '@/components/footer/footer'
 
 export const metadata: Metadata = {
   title: 'Motorcycle Shop app by Giorgi Charkvinai',
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

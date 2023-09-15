@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div className='text-white h-[70vh] flex justify-center items-center'>
       projects
     </div>
   )

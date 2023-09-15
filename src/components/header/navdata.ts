@@ -2,31 +2,31 @@ export const navdata = [
     {
         id:1,
         url: '/',
-        title: 'მთავარი',
+        title: 'Home',
     },
     {
         id:2,
         url: '/about',
-        title: 'ჩვენ შესახებ',
+        title: 'About',
     },
     {
         id:3,
         url: '/services',
-        title: 'სერვისები',
+        title: 'Services',
     },
     {
         id:4,
         url: '/projects',
-        title: 'ნამუშევრები',
+        title: 'Projects',
     },
     {
         id:5,
         url: '/shop',
-        title: 'მაღაზია',
+        title: 'Shop',
     },
     {
         id:6,
         url: '/contact',
-        title: 'დაგვიკავშირდით',
+        title: 'Contact',
     },
 ]

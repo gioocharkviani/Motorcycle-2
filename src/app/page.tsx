@@ -1,8 +1,10 @@
+import Location from "@/components/location/location";
 import Maincarusel from "@/components/maincarusel/maincarusel"
 import Mpabout from "@/components/mpabout/mpabout"
 import Mpbookservice from "@/components/mpbookservice/mpbookservice";
 import Mpbrands from "@/components/mpbrands/mpbrands";
 import Mpservices from "@/components/mpservices/mpservices"
+import Phone from "@/components/phone/phone";
 import Whychooseus from "@/components/whychooseus/whychooseus"
 
 export default function Home({params}:any) {
@@ -10,6 +12,7 @@ export default function Home({params}:any) {
   
   return (
     <div className="w-full bg-[#000] flex flex-col">
+
       <Maincarusel />
       <Mpservices />
       <Mpabout />
@@ -21,6 +24,9 @@ export default function Home({params}:any) {
           <Mpbookservice />
         </div>
       </div>
+
+      <Phone />
+      <Location />
 
     </div>
   )

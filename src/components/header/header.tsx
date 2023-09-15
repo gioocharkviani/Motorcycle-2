@@ -23,7 +23,7 @@ const Header = () => {
   const [burgermenu, setBurgermenu] = useState(false)  
 
   return (
-    <div className='absolute z-[99]  w-full flex justify-center flex-col items-center gap-[15px]'>
+    <div className='relative z-[99] w-full flex justify-center flex-col items-center gap-[15px]'>
         
         <div className='flex relative flex-col  w-full items-center header-top-section'>
           <div className='w-[95%] flex justify-between h-full'>
@@ -44,7 +44,7 @@ const Header = () => {
       
 
 
-        <div className='flex justify-between items-center w-[95%] gap-[50px] '>
+        <div className='flex justify-between items-center w-[95%] gap-[50px] relative'>
 
           <div className='flex-1 hidden md:flex items-center justify-end'>
             <ul className='flex gap-[20px]'>
@@ -73,7 +73,7 @@ const Header = () => {
             <div 
             className={`
              ${burgermenu && 'ActiveBurgermenu'} 
-             fixed py-[10px] px-[20px] top-[0px] z-[99] flex md:hidden  h-[100vh] flex-col`}
+             fixed py-[10px] px-[20px] top-[0px] w-[50%] z-[99] flex md:hidden  h-[100vh] flex-col`}
              >
 
               <div 
@@ -83,8 +83,8 @@ const Header = () => {
                 
                 <ul className='flex flex-col mt-[10px] w-full justify-center gap-[3px] '>
                   {navdata.map(link=> 
-                  <li key={link.id} className='border-b-[1px] text-white py-[5px]   w-full text-[12] burgerMenuLink'>
-                    <Link   href={link.url}>{link.title}</Link>
+                  <li key={link.id}  className='border-b-[1px] text-white py-[5px] flex justify-center w-full text-[12] burgerMenuLink'>
+                    <Link onClick={()=>setBurgermenu(false)} href={link.url}>{link.title}</Link>
                   </li>
                   )}
                 </ul>

@@ -8,7 +8,7 @@ import Image from 'next/image'
 const Mpbrands = () => {
   return (
     <div className='text-[#cacaca]  flex-1 flex flex-col gap-[5px]'>
-      <span className='text-[20px]'>Bike Hero ADVANTAGES</span>
+      <span className='text-[20px]'>Bike ADVANTAGES</span>
       <h2 className='text-[36px] font-bold font leading-none'>OUR MAIN PRINCIPLES</h2>
       <p className='text-[14px] mt-[10px]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque porro
          facilis alias? Tempore fugiat incidunt, quidem voluptatum 

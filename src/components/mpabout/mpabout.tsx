@@ -11,7 +11,7 @@ const Mpabout = () => {
 
             <div className='flex-1 flex flex-col justify-center  items-center md:items-end px-[30px] gap-[15px] md:border-r-[1px] md:border-[#353030]'>
                 <span className='text-[#cacaca] text-[18px]'>
-                    Welcome to bike hero
+                    Welcome to bike
                 </span>
                 <h2 className='text-[#cacaca] text-[30px] w-full md:w-[60%] text-center md:text-right font-bold'>
                     motorcycle REPAIR & custom services

@@ -30,3 +30,40 @@ export const data = [
         models: ['Street Triple', 'Tiger 800', 'Bonneville T120', 'Speed Triple', 'Rocket 3', 'Scrambler 1200', 'Daytona 675']
       },
 ]
+export const serviceData = [
+       {   
+        id:1,
+        Service: 'Electric diagnostic',
+        Price: 300
+       },
+       {   
+        id:2,
+        Service: 'Engine Building',
+        Price: 300
+       },
+       {   
+        id:3,
+        Service: 'Oil Change',
+        Price: 300
+       },
+       {   
+        id:4,
+        Service: 'Brake Change',
+        Price: 300
+       },
+       {   
+        id:5,
+        Service: 'Fork Service',
+        Price: 140
+       },
+       {   
+        id:6,
+        Service: 'Wheel Change',
+        Price: 200
+       },
+       {   
+        id:7,
+        Service: 'Chain service',
+        Price: 400
+       },
+]

@@ -42,6 +42,11 @@ input {
 }
 
 
+.phoneSpan::selection {
+  color: rgb(0, 0, 0);
+  background: #ffffff;;
+}
+
 .header-location::before {
     display: inline-block;
     content: url(../../public/location.svg);
@@ -166,7 +171,7 @@ input {
   .mpservice-title span {
     font-size: 20px;
     text-transform: uppercase;
-    color: #cacaca;
+    color: #ffffff;
     transform: skewX(30deg);
   }
 
@@ -226,4 +231,95 @@ input {
   
   .active-brand {
     background: #ff5e00;
+  }
+
+
+  .googleLocation {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0%) invert(0%) contrast(100%);
+  }
+
+  .FoterLinks {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0px ;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .FoterLinks a:hover {
+    color: #ff5e00;
+  }
+
+  .FoterLinks:hover::before {
+    border-right: 2px solid #ff5e00;
+    border-top: 2px solid #ff5e00;
+    transform:rotate(-135deg)
+
+  }
+  
+  .FoterLinks::before {
+    left: 0;
+    content: '';
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    transform:rotate(45deg);
+    transition: 0.2s ease-in-out;
+  }
+
+
+  .FoterLinks:last-child {
+    border:none;
+  }
+
+  .workinghours {
+    padding: 0 15px;
+    background: #ff5e00;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .workingList {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0px ;
+    display: flex;
+    gap:10px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .socLinks {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0px ;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .socLinks a {
+    transition: 0.1s ease-in-out;
+  }
+
+  .socLinks a:hover {
+    color: #ff5e00;
+  }
+  
+  .footerbottom {
+    display: flex;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.3);
+    border-top: 1px solid rgb(24, 24, 24);
+    outline: 2px solid rgba(0,0,0,0.3);
+    padding: 10px 0;
+    width: 100%;
   }
