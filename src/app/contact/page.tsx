@@ -6,9 +6,10 @@ const page = () => {
     <div className='w-full h-full absolute PageInfo'>
       <div className='onVideoHover'>
         <span className='w-[70%] text-[20px] text-[white]'>
-        This page is currently unavailable. If you would like to access this website, 
-        please place an order now. Once your order is complete, you can watch the video and enjoy a 
-        delightful experience. 😊
+        <p>If you are interested in buying this project and website, please feel free to contact me. 😊</p>
+        <p>Mobile: <a href="tel:+559598550076">+559 598 55 00 76 📱</a></p>
+        <p>Email: <a href="mailto:gioocharkviani@gmail.com">gioocharkviani@gmail.com ✉️</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/giorgi-charkviani-23273a258/">Giorgi Charkviani 🔗</a></p>
         </span>
       </div>
     </div>

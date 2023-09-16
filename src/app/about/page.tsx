@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='text-white h-[70vh] w-full mt-[30px]  flex flex-col justify-center items-center relative overflow-hidden'>
+    <div className='text-white h-[70vh] w-full mt-[30px]  flex flex-col md:justify-center md:items-center relative overflow-hidden'>
       <div className='w-full h-full absolute PageInfo'>
         <div className='onVideoHover'>
           <span className='w-[70%] text-[20px] text-[white]'>
