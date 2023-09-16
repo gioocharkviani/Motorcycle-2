@@ -12,24 +12,22 @@ const Mpbookservice : React.FC<{}> = () => {
 
 
   const [open , setopen] = useState(false);
-  const [brand , setbrand] = useState<String>('');
-  const [brandfilter , setbrandfilter] = useState<String>('');
-  const [filteredData , setfilteredData] = useState<never[]>([])
+  const [brand , setbrand] = useState<string>('');
+  const [brandfilter , setbrandfilter] = useState<string>('');
+  const [filteredData , setfilteredData] = useState([])
   
 
 
   const [openModel  , setOpenModel] = useState<boolean>(false)
-  const [models , setModels] = useState<string[] | undefined>([])
+  const [models , setModels] = useState([])
   const [filteredmodels , setfilteredmodels] = useState<string[]>([])
   const [model , setModel] = useState<string>('')
   const [modelvalue , setnmodelvalue] = useState<string>('')
 
   const [OpenService  , SetOpenService] = useState<boolean>(false)
-  // const [Service , SetService] = useState<string[] | undefined>([])
-  // const [FilterService , SetServiceFilters] = useState<string[]>([])
-  // const [model , setModel] = useState<string>('')
-  // const [modelvalue , setnmodelvalue] = useState<string>('')
-  
+  const [Service, SetService] = useState<string>('');
+  const [ServicePrice, SetServicePrice] = useState<number>();
+
 
   useEffect(()=>{
     setfilteredData([])
@@ -45,13 +43,15 @@ const Mpbookservice : React.FC<{}> = () => {
     setfilteredData(filteredBrands) 
   } , [brandfilter])
 
+  useEffect(() => {
+    const filteredmodels = models.filter((item: string) => item.toLowerCase().includes(modelvalue.toLocaleLowerCase()));
+    setfilteredmodels(filteredmodels);
+  }, [modelvalue]);
+
+
   useEffect(()=>{
-    const filteredmodels = models.filter(item => item.toLowerCase().includes(modelvalue.toLocaleLowerCase()))
-    setfilteredmodels(filteredmodels)
-  }, [modelvalue])
-
-
-
+    SetOpenService(false)
+  }, [Service])
 
 
   useEffect(()=>{
@@ -67,6 +67,7 @@ const Mpbookservice : React.FC<{}> = () => {
     const modeldata = data.find(item => item.brand === brand)
     setModels(modeldata?.models)
   }, [brand])
+
 
   return (
     
@@ -228,7 +229,7 @@ const Mpbookservice : React.FC<{}> = () => {
                 
                 <span  
                   onClick={() => {OpenService === true ? SetOpenService(false) : SetOpenService(true)}} 
-                  className='cursor-pointer w-[100%] '>{model? model : 'choose your model'}
+                  className='cursor-pointer w-[100%] '>{Service? Service : 'choose Service'}
                 </span>
                 
                 {OpenService &&
@@ -239,7 +240,7 @@ const Mpbookservice : React.FC<{}> = () => {
                       return (
                         <li
                         key={item.id} 
-                        onClick={() => {setModel(item.Service)}}
+                        onClick={() => {SetService(item.Service) , SetServicePrice(item.Price)}}
                         className={`py-[5px] px-[5px] bg-[#707070] hover:bg-[#ff5e00]  rounded-[3px] cursor-pointer`}
                         >
                           {item.Service}
@@ -261,8 +262,8 @@ const Mpbookservice : React.FC<{}> = () => {
           </div>
 
           <div className='w-full relative  mt-[30px] bottom-0 left-0 bg-[#ff5e00] px-[20px] py-[30px] flex justify-between'>
-                <div>amunt</div>
-                <div>submit</div>
+                <div className='flex gap-[10px] uppercase'>amount<span className='uppercase'>{brand && model && ServicePrice? ServicePrice : '0'}$</span></div>
+                <div><button className='py-[5px] px-[10px] rounded-[5px] uppercase text-[#676767] text-[13px] bg-[#ffffff]'>Book Service</button></div>
           </div>
 
         </form>
