@@ -1,12 +1,11 @@
-import React from 'react'
-import Image, { StaticImageData } from 'next/image'
+import React from 'react';
 
-const CaruselItem = ({image}:any) => {
+const CaruselItem = ({ image, active }: any) => {
   return (
-    <div className='w-full h-full'>
-        <Image src={image} alt='1' className='w-full h-full object-cover'/>
+    <div className={`w-full h-full CarouselItem  ${active ? 'activeSlide' : 'inactiveSlide'}`}>
+      <img src={image.src} alt="Carousel Image" className={`w-full h-full object-cover ${active ? 'activeSlide' : 'deactiveSlide'}`} />
     </div>
-  )
-}
+  );
+};
 
-export default CaruselItem
+export default CaruselItem;
