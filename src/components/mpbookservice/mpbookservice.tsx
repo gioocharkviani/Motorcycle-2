@@ -20,7 +20,7 @@ const Mpbookservice : React.FC<{}> = () => {
 
 
   const [openModel  , setOpenModel] = useState<boolean>(false)
-  const [models , setModels] = useState([])
+  const [models , setModels] = useState<any>([])
   const [filteredmodels , setfilteredmodels] = useState<string[]>([])
   const [model , setModel] = useState<string>('')
   const [modelvalue , setnmodelvalue] = useState<string>('')
@@ -45,7 +45,7 @@ const Mpbookservice : React.FC<{}> = () => {
   } , [brandfilter])
 
   useEffect(() => {
-    const filteredmodels = models.filter((item) => item.toLowerCase().includes(modelvalue.toLocaleLowerCase()));
+    const filteredmodels = models.filter((item:any) => item.toLowerCase().includes(modelvalue.toLocaleLowerCase()));
     setfilteredmodels(filteredmodels);
   }, [modelvalue]);
 
@@ -65,7 +65,7 @@ const Mpbookservice : React.FC<{}> = () => {
   }, [model])
 
   useEffect(()=>{
-    const modeldata = data.find(item => item.brand === brand)
+    const modeldata = data.find((item:any) => item.brand === brand)
     setModels(modeldata?.models)
   }, [brand])
 
