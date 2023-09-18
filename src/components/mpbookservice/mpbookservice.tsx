@@ -14,12 +14,12 @@ const Mpbookservice : React.FC<{}> = () => {
   const [open , setopen] = useState(false);
   const [brand , setbrand] = useState<string>('');
   const [brandfilter , setbrandfilter] = useState<string>('');
-  const [filteredData , setfilteredData] = useState([])
+  const [filteredData , setfilteredData] = useState<any>()
   
 
 
   const [openModel  , setOpenModel] = useState<boolean>(false)
-  const [models , setModels] = useState([])
+  const [models , setModels] = useState<any>()
   const [filteredmodels , setfilteredmodels] = useState<string[]>([])
   const [model , setModel] = useState<string>('')
   const [modelvalue , setnmodelvalue] = useState<string>('')
@@ -199,7 +199,7 @@ const Mpbookservice : React.FC<{}> = () => {
                           {item}
                         </li>
                       )
-                    }) : models?.map((item , i) => {
+                    }) : models?.map((item:any , i:number) => {
                       return (
                         <li
                         key={i} 

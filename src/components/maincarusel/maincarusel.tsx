@@ -44,7 +44,7 @@ const MainCarousel = () => {
     <div className="w-full relative mt-[-90px] h-[100vh] text-[green] overflow-hidden flex items-center justify-center">
       <div className="flex w-full h-full">
         {slideData.map((item, index) => (
-          <CaruselItem key={item.id} image={item.image} active={index === currentSlide} />
+          <CaruselItem key={item.id} image={item.image} desc={item?.desc} active={index === currentSlide} />
         ))}
       </div>
 
