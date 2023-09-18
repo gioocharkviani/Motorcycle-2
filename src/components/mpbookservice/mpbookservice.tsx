@@ -4,6 +4,7 @@ import React, { SetStateAction } from 'react'
 import { useState ,useEffect} from 'react'
 import { data } from './data'
 import { serviceData } from './data'
+import { log } from 'console'
 
 
 
@@ -19,7 +20,7 @@ const Mpbookservice : React.FC<{}> = () => {
 
 
   const [openModel  , setOpenModel] = useState<boolean>(false)
-  const [models , setModels] = useState<any>()
+  const [models , setModels] = useState([])
   const [filteredmodels , setfilteredmodels] = useState<string[]>([])
   const [model , setModel] = useState<string>('')
   const [modelvalue , setnmodelvalue] = useState<string>('')
@@ -44,7 +45,7 @@ const Mpbookservice : React.FC<{}> = () => {
   } , [brandfilter])
 
   useEffect(() => {
-    const filteredmodels = models.filter((item: string) => item.toLowerCase().includes(modelvalue.toLocaleLowerCase()));
+    const filteredmodels = models.filter((item) => item.toLowerCase().includes(modelvalue.toLocaleLowerCase()));
     setfilteredmodels(filteredmodels);
   }, [modelvalue]);
 
@@ -68,6 +69,10 @@ const Mpbookservice : React.FC<{}> = () => {
     setModels(modeldata?.models)
   }, [brand])
 
+  const BookService = ()=> {
+    console.log(123);
+    
+  }
 
   return (
     
@@ -263,7 +268,7 @@ const Mpbookservice : React.FC<{}> = () => {
 
           <div className='w-full relative  mt-[30px] bottom-0 left-0 bg-[#ff5e00] px-[20px] py-[30px] flex justify-between'>
                 <div className='flex gap-[10px] uppercase'>amount<span className='uppercase'>{brand && model && ServicePrice? ServicePrice : '0'}$</span></div>
-                <div><button className='py-[5px] px-[10px] rounded-[5px] uppercase text-[#676767] text-[13px] bg-[#ffffff]'>Book Service</button></div>
+                <div><button onClick={BookService} className='py-[5px] px-[10px] rounded-[5px] uppercase text-[#676767] text-[13px] bg-[#ffffff]'>Book Service</button></div>
           </div>
 
         </form>
