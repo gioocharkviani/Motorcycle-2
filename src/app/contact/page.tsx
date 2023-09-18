@@ -5,12 +5,12 @@ const page = () => {
     <div  className='text-white md:h-[70vh] w-full mt-[30px]  flex flex-col md:justify-center md:items-center relative overflow-hidden'>
     <div className='w-full h-full absolute PageInfo'>
       <div className='onVideoHoverContact'>
-        <span className='w-[70%] text-[20px] text-[white]'>
-        <p>If you are interested in buying this project and website, please feel free to contact me. 😊</p>
+        <div className='w-[95%] md:w-[70%] text-[13px] md:text-[20px] text-[white]'>
+        <p className='hidden md:block'>If you are interested in buying this project and website, please feel free to contact me. 😊</p>
         <p>Mobile: <a href="tel:+559598550076">+559 598 55 00 76 📱</a></p>
         <p>Email: <a href="mailto:gioocharkviani@gmail.com">gioocharkviani@gmail.com ✉️</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/giorgi-charkviani-23273a258/">Giorgi Charkviani 🔗</a></p>
-        </span>
+        </div>
       </div>
     </div>
 
